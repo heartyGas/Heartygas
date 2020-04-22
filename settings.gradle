@@ -1,0 +1,2 @@
+rootProject.name='Heartygas'
+include ':app'
