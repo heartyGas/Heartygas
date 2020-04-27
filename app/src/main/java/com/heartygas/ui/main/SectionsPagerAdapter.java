@@ -7,8 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.heartygas.Frag1;
-import com.heartygas.Frag2;
+import com.heartygas.CustomerRegisterFragment;
+import com.heartygas.VendorRegisterFragment;
 import com.heartygas.R;
 
 /**
@@ -31,10 +31,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new Frag1();
+                fragment = new CustomerRegisterFragment();
                 break;
             case 1:
-                fragment = new Frag2();
+                fragment = new VendorRegisterFragment();
         }
         return fragment;
     }
