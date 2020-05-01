@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/freeGas" android:title="Free Gas" android:icon="@drawable/ic_gas"/>
+    <item android:id="@+id/payment" android:title="Payment" android:icon="@drawable/ic_gas"/>
+    <item android:id="@+id/history" android:title="History" android:icon="@drawable/ic_gas"/>
+    <item android:id="@+id/referral" android:title="Referral" android:icon="@drawable/ic_gas"/>
+    <item android:id="@+id/support" android:title="Support" android:icon="@drawable/ic_gas"/>
+        <item android:id="@+id/about" android:title="About" android:icon="@drawable/ic_gas"/>
+    <item android:id="@+id/signOut" android:title="Sign Out" android:icon="@drawable/ic_gas"/>
+
+</menu>
