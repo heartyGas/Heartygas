@@ -1,19 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView
-    android:layout_height="match_parent"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#044942"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+    <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingTop="40dp"
         tools:context=".ui.main.PlaceholderFragment">
 
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#065E55"
+        android:paddingBottom="50dp"
+        android:layout_margin="20dp">
+
+            <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
         <EditText
+            android:textColor="@color/white"
+            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="First Name"
@@ -25,6 +43,7 @@
         </EditText>
 
         <EditText
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Last Name"
@@ -36,6 +55,7 @@
         </EditText>
 
         <EditText
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Company Name"
@@ -46,6 +66,7 @@
         </EditText>
 
         <EditText
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Phone Number"
@@ -57,6 +78,7 @@
         </EditText>
 
         <EditText
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Email Address"
@@ -68,6 +90,8 @@
         </EditText>
 
         <EditText
+            android:textColor="@color/white"
+            android:layout_marginBottom="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
@@ -78,20 +102,27 @@
             android:inputType="textPassword">
         </EditText>
 
+
+    </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
         <TextView
             android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:text="By clicking on 'Register', you agree to our terms and condition on Vendor related services">
 
         </TextView>
 
         <Button
-            android:paddingTop="10dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
             android:id="@+id/vendorRegisterButton"
             android:layout_gravity="center"
+            android:background="#065E55"
+            android:textColor="@color/white"
             android:layout_marginTop="40dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -108,6 +139,7 @@
             android:layout_gravity="center"
             android:textAlignment="center"
             android:textSize="15dp"
+            android:textColor="@color/white"
             android:id="@+id/vendorLoginText"
             android:onClick="vendorRegisterToSignIn"
             android:text="Already Registered? Sign In">

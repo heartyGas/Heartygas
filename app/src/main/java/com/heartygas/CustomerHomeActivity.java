@@ -1,29 +1,28 @@
 package com.heartygas;
 
 import android.content.DialogInterface;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+
+import com.google.android.material.navigation.NavigationView;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
-import com.heartygas.R;
-
-public class HomeActivity extends AppCompatActivity {
+public class CustomerHomeActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_customer_home);
 
         drawerLayout = findViewById(R.id.activityMainIDWithDrawer);
         toggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
@@ -48,6 +47,9 @@ public class HomeActivity extends AppCompatActivity {
         Class fragmentClass = null;
         switch (item.getItemId()) {
             case R.id.freeGas:
+
+                Toast.makeText(getApplicationContext(), "FVFVFDDV", Toast.LENGTH_LONG).show();
+
                 fragmentClass = FreeGasFragment.class;
                 break;
             case R.id.payment:
@@ -67,6 +69,7 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.signOut:
                 break;
+
         }
         try{
             myFragment = (Fragment) fragmentClass.newInstance();
@@ -82,18 +85,15 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setUpDrawerContent (NavigationView navigationView) {
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                selectItemDrawer(menuItem);
-                return true;
-            }
+        navigationView.setNavigationItemSelectedListener(menuItem -> {
+            selectItemDrawer(menuItem);
+            return true;
         });
     }
 
     @Override
     public void onBackPressed() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(HomeActivity.this);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(CustomerHomeActivity.this);
         builder.setMessage("Do you want to Exit?");
         builder.setCancelable(true);
         builder.setNegativeButton("Yes", new DialogInterface.OnClickListener() {
@@ -112,4 +112,10 @@ public class HomeActivity extends AppCompatActivity {
         alertDialog.show();
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 }

@@ -5,38 +5,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingTop="170dp"
     android:orientation="vertical"
-    android:paddingTop="40dp"
+    android:background="#3F4C91"
     tools:context=".LoginActivity">
 
 
-    <EditText
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Email Address"
-        android:id="@+id/loginEmailTextField"
-        android:inputType="textEmailAddress">
-    </EditText>
+    <androidx.cardview.widget.CardView
 
-    <EditText
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/loginPasswordTextField"
-        android:hint="Password"
-        android:inputType="textPassword">
-    </EditText>
+        app:cardCornerRadius="5dp"
+        app:cardBackgroundColor="#5562A7"
+        android:paddingBottom="50dp"
+        android:layout_margin="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:textColor="@color/white"
+                android:id="@+id/loginEmailTextField"
+                android:inputType="textEmailAddress">
+            </EditText>
+
+            <EditText
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:id="@+id/loginPasswordTextField"
+                android:hint="Password"
+                android:inputType="textPassword">
+            </EditText>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
 
     <Button
         android:layout_marginTop="40dp"
         android:layout_marginStart="20dp"
+        android:background="#5562A7"
         android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
+        android:textColor="@color/white"
         android:id="@+id/loginToHomeActivity"
         android:layout_height="wrap_content"
         android:text="Sign In">
@@ -47,6 +73,7 @@
         android:layout_gravity="center"
         android:textAlignment="center"
         android:textSize="15dp"
+        android:textColor="@color/white"
         android:id="@+id/userRegisterText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

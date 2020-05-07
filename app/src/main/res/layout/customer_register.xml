@@ -2,75 +2,100 @@
 <ScrollView
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-
+    android:background="#3F4C91"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingTop="40dp"
         tools:context=".ui.main.PlaceholderFragment">
 
-        <EditText
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="First Name"
-            android:id="@+id/customerFirstNameTextField"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:paddingBottom="20dp"
-            android:inputType="textPersonName">
-        </EditText>
+            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="#5562A7"
+            android:paddingBottom="50dp"
+            android:layout_margin="20dp">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Last Name"
-            android:id="@+id/customerLastNameTextField"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:paddingBottom="20dp"
-            android:inputType="textPersonName">
-        </EditText>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Phone Number"
-            android:id="@+id/customerPhoneTextField"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:paddingBottom="20dp"
-            android:inputType="phone">
-        </EditText>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:textColor="@color/white"
+                    android:id="@+id/customerFirstNameTextField"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="50dp"
+                    android:paddingBottom="20dp"
+                    android:inputType="textPersonName">
+                </EditText>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email Address"
-            android:id="@+id/customerAddressTextField"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:paddingBottom="20dp"
-            android:inputType="textEmailAddress">
-        </EditText>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Last Name"
+                    android:textColor="@color/white"
+                    android:id="@+id/customerLastNameTextField"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingBottom="20dp"
+                    android:inputType="textPersonName">
+                </EditText>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Password"
-            android:id="@+id/customerPasswordTextField"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:paddingBottom="20dp"
-            android:inputType="textPassword">
-        </EditText>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Phone Number"
+                    android:textColor="@color/white"
+                    android:id="@+id/customerPhoneTextField"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingBottom="20dp"
+                    android:inputType="phone">
+                </EditText>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address"
+                    android:textColor="@color/white"
+                    android:id="@+id/customerAddressTextField"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:paddingBottom="20dp"
+                    android:inputType="textEmailAddress">
+                </EditText>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:textColor="@color/white"
+                    android:id="@+id/customerPasswordTextField"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="50dp"
+                    android:paddingBottom="20dp"
+                    android:inputType="textPassword">
+                </EditText>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:padding="10dp"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="By clicking on 'Register', you agree to our terms and conditions on customer related services">
@@ -78,12 +103,13 @@
         </TextView>
 
         <Button
-            android:paddingTop="10dp"
             android:id="@+id/customerRegisterButton"
             android:layout_marginStart="20dp"
+            android:background="#5562A7"
             android:layout_marginEnd="20dp"
             android:layout_gravity="center"
             android:layout_marginTop="70dp"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Register">
@@ -94,6 +120,7 @@
 
         <TextView
             android:padding="10dp"
+            android:textColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
